@@ -10,8 +10,9 @@ The app consists of the server pkg which defines (and uses) **Store** interface.
 #### Some tests and benchmarks
 
 ```bash
-# clone the repo
-git clone
+# clone the repo and cd into it
+git clone git@github.com:pavel1337/counter.git
+cd counter
 
 # to run all tests
 go test -v ./...
@@ -23,5 +24,17 @@ go test -v ./... -bench=. -run=xxx -benchmem
 
 ### How to install
 
+```bash
+# clone the repo and cd into it
+git clone git@github.com:pavel1337/counter.git
+cd counter
+
+# build the binary
+go build
+
+# run the binary
+./counter --help
+
+# start it using mapper implementation and /tmp/db.gob as a file storage
+./counter --imp mapper --path /tmp/db.gob
 ```
-# build
